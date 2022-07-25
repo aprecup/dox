@@ -110,9 +110,9 @@ exports.parseComment = function(str) {
   }
 
   // markdown
-  description.full = markdown(escape(description.full));
-  description.summary = markdown(escape(description.summary));
-  description.body = markdown(escape(description.body));
+  description.full = markdown.parse(escape(description.full));
+  description.summary = markdown.parse(escape(description.summary));
+  description.body = markdown.parse(escape(description.body));
 
   return comment;
 }
